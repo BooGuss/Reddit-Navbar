@@ -4,52 +4,370 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+}
+
+button:active {
+    border-style: none;
+}
+
+
+/* navbar */
 .navbar {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(30, 30, 30);
     margin: 0;
-    border-bottom: 1.5px solid rgb(122, 122, 122);
+    border-bottom: 0.8px solid rgb(91, 91, 91);
     align-items: center;
-    height: 8vh;
+    height: 7vh;
     max-height: 80px;
 }
 
-.reddit-logo {
-    height: 30px;
-    width: 100px;
-    background-image: url("/IMAGES/reddit-logo3.jpg");
-    display: block;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-decoration: none;
-    font-size: larger;
-    color: honeydew;
+.search-bar:focus, .reddit-home:focus, .popularbtn:focus, .allbtn:focus, .rpanbtn:focus,
+.chatbtn:focus, .messagesbtn:focus, .createpostbtn:focus, .getcoinsbtn:focus, .profilebtn:focus {
+    outline: none;
 }
 
-.reddit-home {
-    height: 30px;
-    width: 100px;
+
+/* reddit logo */
+.reddit-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo1 {
+    height: 35px;
+    width: 35px;
+    display: block;
+}
+
+.logo2 {
+    height: 37px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-decoration: none;
+    font-size: x-large;
+    color: honeydew;
+    margin-left: 10px;
+}
+/* reddit logo end */
+
+
+
+/* reddit home */
+
+
+.reddit-home {    
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0.8px solid rgb(30, 30, 30);
+    background-color: rgb(30, 30, 30);
+    cursor: pointer;
+}
+
+.reddit-home:hover {
+    border: 0.8px solid rgb(91, 91, 91);
+}
+
+.fas.fa-rocket {
+
+    color: royalblue;
+    margin-top: 2px;
+
+}
+
+.reddit-home i {
+    color: honeydew;
+    margin-left: 5px;
+}
+
+
+
+.fas.fa-caret-down {
+    margin-top: 2px;
+    margin-left: 172px;
+    color: rgb(122, 122, 122);
+}
+
+.redditdropitdown {
+    width: 16%;
+    display: inline-block;
+    position: relative;
 }
 
 .reddithome-dropdown {
     display: none;
-} 
-
-.search-bar {
-    height: 40px;
-    width: 450px;
-    border-radius: 10px;
-    border: 1.5px solid rgb(122, 122, 122);
-    background-color: rgb(35, 35, 35);
+    position: absolute;
+    background-color: rgb(30, 30, 30);
+    border-left: 0.8px solid rgb(91, 91, 91);
+    border-bottom: 0.8px solid rgb(91, 91, 91);
+    border-right: 0.8px solid rgb(91, 91, 91);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;     
 }
 
-.search-bar::placeholder {
+
+.reddithome-dropdown li a {
+    color: honeydew;
+    text-decoration: none;
+    display: block;
+}
+
+.redditdropitdown:hover .reddithome-dropdown {
+    display: contents;
+}
+
+
+/* reddit home end */
+
+
+
+/* search bar */
+.search {
+    height: 40px;
+    width: 28%;
+    border-radius: 5px;
+    border: 0.8px solid rgb(91, 91, 91);
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    margin-left: 23px;
+    height: 34px;
+    width: 475px;
+    border-radius: 5px;
+    border: 0.8px solid rgb(54, 54, 54);
+    background-color: rgb(54, 54, 54);
+    color: honeydew;
+}
+
+
+.fas.fa-search {
+    margin-left: 4px;
+    position: absolute;
     color: rgb(122, 122, 122);
 }
 
+.search-bar::-moz-placeholder {
+    color: rgb(122, 122, 122);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    padding-left: 20px;
+}
+/* search bar end */
+
+
+
+/* nav buttons */
 .popularbtn {
-    
+    background-color: rgb(30, 30, 30);
+    height: 32px;
+    width: 32px;
+    border: none;
+    border-radius: 2px;
+}
+
+.fas.fa-chart-line {
+    color: honeydew;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.popularbtn:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+.allbtn {
+    height: 32px;
+    width: 32px;
+    background-color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 2px;
+}
+
+.fas.fa-chart-bar {
+    color: honeydew;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.allbtn:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+.rpanbtn {
+    height: 32px;
+    width: 32px;
+    background-color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 2px;
+}
+
+.rpanbtn img {
+    height: 16px;
+    width: 16px;
+}
+
+.rpanbtn:hover{
+    background-color: rgb(49, 49, 49);
+}
+/* nav buttons end */
+
+
+
+
+.border {
+    background-color: rgb(49, 49, 49);
+    height: 32px;
+    width: 0.6px;
 }
 
 
+
+
+/* nav buttons */
+.chatbtn {
+    height: 32px;
+    width: 32px;
+    background-color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 2px;
+}
+
+.far.fa-comment-dots {
+    color: honeydew;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.chatbtn:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+.messagesbtn {
+    height: 32px;
+    width: 32px;
+    background-color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 2px;
+}
+
+.fas.fa-envelope {
+    color: honeydew;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.messagesbtn:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+.createpostbtn {
+    height: 32px;
+    width: 32px;
+    background-color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 2px;
+}
+
+.fas.fa-edit {
+    color: honeydew;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.createpostbtn:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+.getcoinsbtn {
+    background-color: rgb(30, 30, 30);
+    height: 38px;
+    width: 98px;
+    border-radius: 20px;
+    border: 0.8px solid rgba(245, 245, 0, 0.877);
+}
+
+.getcoins-txt {
+    color: honeydew;
+}
+
+.fas.fa-coins {
+    color: rgba(245, 245, 0, 0.877);
+}
+
+.getcoinsbtn:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+.profilebtn {
+    background-color: rgb(30, 30, 30);
+    height: 38px;
+    width: 16%;
+    border-radius: 2px;
+    border: none;
+}
+
+.fas.fa-id-badge {
+    color: royalblue;
+}
+
+.profilebtn:hover {
+    border: 0.8px solid rgb(49, 49, 49);
+}
+/* nav buttons end */
+
+
+
+/* media quiery */
+@media screen and (max-width: 1175px) {
+    .profilebtn {
+        width: 48px;
+
+    }
+} 
+
+@media screen and (max-width: 1000px) {
+    .logo2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .popularbtn{
+        display: none;
+    }
+
+    .allbtn {
+        display: none;
+    }
+
+    .rpanbtn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chatbtn {
+        display: none;
+    }
+
+    .messagesbtn {
+        display: none;
+    }
+
+    .createpostbtn {
+        display: none;
+    }
+
+    .border {
+        display: none;
+    }
+}

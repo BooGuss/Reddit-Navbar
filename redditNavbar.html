@@ -6,11 +6,21 @@
     <title>reddit navbar</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/81e90a4ab1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar">
-        <a class="reddit-logo" href="#">reddit</a>
-        <button class="reddit-home">Home</button>
+        <div class="reddit-logo">
+            <img class="logo1" src="reddit-logo.png">
+            <a class="logo2" href="#">reddit</a>
+        </div>
+        
+    <div class="redditdropitdown"> 
+        <button class="reddit-home">
+            <i class="fas fa-rocket"></i>
+            <i>Home</i>
+            <i class="fas fa-caret-down"></i>
+        </button>
         <ul class="reddithome-dropdown">
             <li><input type="text" placeholder="Filter"></li>
             <li>REDDIT FEEDS</li>
@@ -20,16 +30,43 @@
             <li><a href="">Top Communities</a></li>
             <li><a href="">Reddit Public Access Net...</a></li>
         </ul>
-        <input class="search-bar" type="text" placeholder="Search">
-        <button class="popularbtn">Popular</button>
-        <button class="allbtn">All</button>
-        <button class="rpanbtn">Reddit Public Access Network</button>
-        <div class="border"></div>
-        <button class="chatbtn">Chat</button>
-        <button class="messagesbtn">Messages</button>
-        <button class="createpostbtn">Creat Post</button>
-        <button class="getcoinsbtn">Get Coins</button>
-        <button class="profilebtn">Profile</button>
+    </div> 
+        
+        <div class="search">
+            <i class="fas fa-search"></i>
+            <input class="search-bar" type="text" placeholder="Search">
+        </div>
+        <button class="popularbtn">
+                <i class="fas fa-chart-line"></i>
+        </button>
+        <button class="allbtn">
+            <i class="fas fa-chart-bar"></i>
+        </button>
+        <button class="rpanbtn">
+            <img src="RPAN_icon.png">
+        </button>
+        <div class="border">
+            <section style="display: none;">
+                border
+            </section>
+        </div>
+        <button class="chatbtn">
+            <i class="far fa-comment-dots"></i>
+        </button>
+        <button class="messagesbtn">
+            <i class="fas fa-envelope"></i>
+        </button>
+        <button class="createpostbtn">
+            <i class="fas fa-edit"></i>
+        </button></li>
+        <button class="getcoinsbtn">
+            <i class="fas fa-coins"></i>
+            <i class="getcoins-txt">Get Coins</i>
+        </button></li>
+        <button class="profilebtn">
+            <i class="fas fa-id-badge"></i>
+        </button>
     </nav>
+
 </body>
 </html>
